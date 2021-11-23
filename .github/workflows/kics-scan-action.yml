@@ -28,15 +28,18 @@ jobs:
         verbose: true
     # Display the results in json format
     - name: Display kics results
+      if: always()
       run: |
         cat results/results.json
     # Upload results after scan
     - name: Upload kics results.json
+      if: always()
       uses: actions/upload-artifact@v2
       with:
         name: results-json-${{ github.run_id }}
         path: results/results.json
     - name: Upload kics results.html
+      if: always()
       uses: actions/upload-artifact@v2
       with:
         name: results-html-${{ github.run_id }}
