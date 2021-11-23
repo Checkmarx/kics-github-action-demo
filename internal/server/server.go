@@ -27,7 +27,7 @@ func NewServer(port string) (*Server, error) {
 func (s *Server) Run() error {
 	log.Info().Msgf("Server is running on port %s", s.port)
 	if err := http.ListenAndServe(s.port, s.handler); err != nil {
-		log.Err(err).Msg("Failed to start server")
+		log.Err(err).Msg("Failed to start server!!")
 		return err
 	}
 	return nil
