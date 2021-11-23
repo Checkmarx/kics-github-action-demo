@@ -24,7 +24,6 @@ jobs:
         # scanning all directories
         path: '.'
         output_path: results
-        ignore_on_exit: results # Just throws an error if the scan fails, not with invalid results
         output_formats: "json,html"
         verbose: true
     # Display the results in json format
